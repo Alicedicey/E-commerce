@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Product Page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="container header">
+      <div class="left">
+        <button aria-label="Open menu" class="icon-btn" id="menuBtn">
+          <img src="./images/icon-menu.svg" alt="" />
+        </button>
+        <a href="#" class="brand">sneakers</a>
+        <nav class="nav" id="nav">
+          <button aria-label="Close menu" class="icon-btn close" id="closeMenuBtn">
+            <img src="./images/icon-close.svg" alt="" />
+          </button>
+          <a href="#" class="nav-link">Collections</a>
+          <a href="#" class="nav-link">Men</a>
+          <a href="#" class="nav-link">Women</a>
+          <a href="#" class="nav-link">About</a>
+          <a href="#" class="nav-link">Contact</a>
+        </nav>
+      </div>
+      <div class="right">
+        <button class="icon-btn cart-btn" id="cartBtn" aria-haspopup="true" aria-expanded="false" aria-controls="cartPanel">
+          <img src="./images/icon-cart.svg" alt="Cart" />
+          <span class="badge" id="cartCount" hidden>0</span>
+        </button>
+        <img class="avatar" src="./images/image-avatar.png" alt="Profile" />
+      </div>
+      <div class="cart-panel" id="cartPanel" role="dialog" aria-label="Shopping cart" hidden>
+        <h3>Cart</h3>
+        <div id="cartContent" class="cart-content empty">
+          <p>Your cart is empty.</p>
+        </div>
+        <button id="checkoutBtn" class="btn primary" hidden>Checkout</button>
+      </div>
+    </header>
+
+    <main class="container grid">
+      <section class="gallery">
+        <div class="main-image">
+          <button class="lightbox-trigger" id="lightboxTrigger" aria-label="Open image lightbox">
+            <img id="mainImage" src="./images/image-product-1.jpg" alt="Product image" />
+          </button>
+          <button class="nav-arrow prev" id="prevImg" aria-label="Previous image">
+            <img src="./images/icon-previous.svg" alt="" />
+          </button>
+          <button class="nav-arrow next" id="nextImg" aria-label="Next image">
+            <img src="./images/icon-next.svg" alt="" />
+          </button>
+        </div>
+        <div class="thumbs" id="thumbs">
+          <button class="thumb selected" data-index="0">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail 1" />
+          </button>
+          <button class="thumb" data-index="1">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail 2" />
+          </button>
+          <button class="thumb" data-index="2">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail 3" />
+          </button>
+          <button class="thumb" data-index="3">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail 4" />
+          </button>
+        </div>
+      </section>
+
+      <section class="details">
+        <p class="company">Sneaker Company</p>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p class="desc">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+          they’ll withstand everything the weather can offer.
+        </p>
+
+        <div class="price-row">
+          <div class="price">
+            <span class="current">$125.00</span>
+            <span class="discount">50%</span>
+          </div>
+          <span class="old">$250.00</span>
+        </div>
+
+        <div class="controls">
+          <div class="qty" aria-label="Quantity selector">
+            <button id="decrement" aria-label="Decrease quantity">
+              <img src="./images/icon-minus.svg" alt="" />
+            </button>
+            <input id="quantity" type="number" min="0" value="0" aria-live="polite" />
+            <button id="increment" aria-label="Increase quantity">
+              <img src="./images/icon-plus.svg" alt="" />
+            </button>
+          </div>
+          <button id="addToCart" class="btn">
+            <img src="./images/icon-cart.svg" alt="" />
+            <span>Add to cart</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Image lightbox">
+      <div class="lightbox-inner">
+        <button id="closeLightbox" class="icon-btn close">
+          <img src="./images/icon-close.svg" alt="Close lightbox" />
+        </button>
+        <div class="lightbox-main">
+          <img id="lightboxImage" src="./images/image-product-1.jpg" alt="Product image large" />
+          <button class="nav-arrow prev" id="lbPrevImg" aria-label="Previous image">
+            <img src="./images/icon-previous.svg" alt="" />
+          </button>
+          <button class="nav-arrow next" id="lbNextImg" aria-label="Next image">
+            <img src="./images/icon-next.svg" alt="" />
+          </button>
+        </div>
+        <div class="thumbs" id="lbThumbs">
+          <button class="thumb selected" data-index="0">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail 1" />
+          </button>
+          <button class="thumb" data-index="1">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail 2" />
+          </button>
+          <button class="thumb" data-index="2">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail 3" />
+          </button>
+          <button class="thumb" data-index="3">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail 4" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./dist/main.js" defer></script>
+  </body>
+</html>
