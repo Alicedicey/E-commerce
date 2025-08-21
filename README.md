@@ -16,8 +16,6 @@ The challenge helped me practice building a fully responsive product page with a
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-
-
 ## Overview
 
 ### The challenge
@@ -39,11 +37,13 @@ Users should be able to:
 #### Mobile
 ![Mobile View](./screenshots/mobile.png)
 
+---
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/<your-username>/<your-repo-name>)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/alicedicey/E-commerce)
+- Live Site URL: 👉 [https://alicedicey.github.io/E-commerce/](https://alicedicey.github.io/E-commerce/)
+
 
 
 ## My process
@@ -54,6 +54,7 @@ Users should be able to:
 - CSS3 (Flexbox + Grid)
 - TypeScript (compiled to JavaScript)
 - Mobile-first workflow
+
 
 ### What I learned
 
@@ -73,26 +74,29 @@ const updateCartBadge = (count: number): void => {
   badge.style.display = count > 0 ? "inline-block" : "none";
 };
 
-### Continued development
-
+Continued development
 In the future, I’d like to:
-
-.Expand the cart to handle multiple products
-
-.Add a checkout page with form validation
-
-.Experiment with React/Next.js for state management at scale
+Expand the cart to handle multiple products
+Add a checkout page with form validation
+Experiment with React/Next.js for state management at scale
 
 Useful resources
+  Typescript Handbook - Great reference for type safety and TS basics.
+  MDN Web Docs- My go-to for CSS and JS documentation.
+  Frontend Mentor Community- Inspiration and tips from other developers.
 
-TypeScript Handbook
- - Great reference for type safety and TS basics.
+  ## 📖 How to Use
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/alice_dicey/E-commerce.git
 
-MDN Web Docs
- - My go-to for CSS and JS documentation.
+ 2.  Open index.html in your browser.
 
-Frontend Mentor Community
- - Inspiration and tips from other developers.
 
-Author
-ODUNAYO AMOYE
+🧑‍💻 Author
+
+GitHub – alice_dicey
+
+Frontend Mentor – @alice_dicey
+
+LinkedIn – Odunayo Amoye
